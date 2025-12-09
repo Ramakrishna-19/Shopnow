@@ -1,4 +1,4 @@
-<h1>🛒 ShopNow – Full Stack E-Commerce Website</h1>
+<h1 align="center">ShopNow – Full Stack E-Commerce Web Application</h1>
 
 ShopNow is a full-stack e-commerce platform built using React, Node.js, Express, and MongoDB, offering a seamless shopping experience across all device sizes, including mobile phones, tablets, and laptops.The application includes a dedicated User Frontend for customers and an Admin Panel for managing products.
 
