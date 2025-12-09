@@ -1,10 +1,10 @@
-🛒 **ShopNow – Full Stack E-Commerce Website**
+<h1 align="center">ShopNow – Full Stack E-Commerce Web Application</h1>
 
-ShopNow is a full-stack E-Commerce application built using React, Node.js, Express, and MongoDB, featuring an Admin Panel, User Frontend, and a secure JWT-based Authentication System.
-Users can browse products, view product details, manage their cart, and securely checkout.
-Admins can add/remove products through a dedicated dashboard.
+ShopNow is a full-stack e-commerce platform built using React, Node.js, Express, and MongoDB, offering a seamless shopping experience across all device sizes, including mobile phones, tablets, and laptops.The application includes a dedicated User Frontend for customers and an Admin Panel for managing products.
 
-🚀 FEATURES
+Users can browse products, view detailed item pages, manage their shopping cart, and authenticate securely using a JWT-based login system.Administrators can efficiently add, update, and remove products through a structured dashboard, ensuring complete control over the store’s inventory.
+
+<h2>🚀 FEATURES</h2>
 
 ⭐ **User Frontend**
 
@@ -33,7 +33,7 @@ Admins can add/remove products through a dedicated dashboard.
 - Token-protected routes
 - Persistent cart stored in MongoDB
 
-🧰 Tech Stack
+<h2>🧰 Tech Stack</h2>
 
  * Frontend (User)
 
@@ -56,7 +56,7 @@ Admins can add/remove products through a dedicated dashboard.
         Multer (image uploads)
         CORS enabled
 
-📁 **Folder Structure**
+<h2>📁 Folder Structure</h2>
 
 ```
 ShopNow/
@@ -81,7 +81,7 @@ ShopNow/
 └── README.md
 ```
 
-⚙️ **Environment Setup**
+<h2>⚙️ Environment Setup</h2>
 
 * **Backend**
   
@@ -108,7 +108,7 @@ ShopNow/
     Runs at:  http://localhost:5173
 
 
-🔑 **Authentication**
+<h2>🔑 Authentication</h2>
 
 * Your app uses JWT tokens:
     - Token created on signup/login  
@@ -118,7 +118,7 @@ ShopNow/
         • `/removefromcart`  
         • `/getcart`
 
-📡 API Endpoints
+<h2>📡 API Endpoints</h2>
 
 * Product APIs
     | Method | Endpoint          | Description                     |
@@ -142,7 +142,7 @@ ShopNow/
     | POST   | /removefromcart | Yes       | Remove item from cart|
     | POST   | /getcart        | Yes       | Load cart from DB    |
 
-## 🖼 Screenshots
+<h2>🖼 Screenshots</h2>
 
 ### 📌 Home Page
 ![Screenshot 1](frontend/src/Components/Assets/Screenshot1.png)
@@ -171,14 +171,14 @@ ShopNow/
 ### 📌 Product List (Admin)
 ![Screenshot 3](frontend/src/Components/Assets/Screenshot3.png)
 
-### 📌 Mobile View
+### 📌 Mobile and Tab (different sizes) View
+ ![Screenshot 12](frontend/src/Components/Assets/Screenshot12.png)    ![Screenshot 13](frontend/src/Components/Assets/Screenshot13.png)
 
-
-🙌 Contributing
+<h2>🙌 Contributing</h2>
 
 Pull requests are welcome!
 For major changes, please open an issue to discuss what you'd like to change.
 
-📜 License
+<h2>📜 License</h2>
 
 This project is licensed under the MIT License.
