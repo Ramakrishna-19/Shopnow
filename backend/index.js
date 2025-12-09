@@ -11,7 +11,7 @@ const { log } = require("console");
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://Ramakrishna:ramakrishnadatabase@cluster0.wlvvuzi.mongodb.net/ShopNow")
+mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
 
