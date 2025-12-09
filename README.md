@@ -1,4 +1,4 @@
-🛒 ShopNow – Full Stack E-Commerce Website
+🛒 **ShopNow – Full Stack E-Commerce Website**
 
 ShopNow is a full-stack E-Commerce application built using React, Node.js, Express, and MongoDB, featuring an Admin Panel, User Frontend, and a secure JWT-based Authentication System.
 Users can browse products, view product details, manage their cart, and securely checkout.
@@ -147,34 +147,31 @@ ShopNow/
 ### 📌 Home Page
 ![Screenshot 1](frontend/src/Components/Assets/Screenshot1.png)
 
-### 📌 Admin Panel
-![Screenshot 2](frontend/src/Components/Assets/Screenshot2.png)
-
 ### 📌 Product Listing Page
-
-### 📌 Product Details Page
-![Screenshot 3](frontend/src/Components/Assets/Screenshot3.png)
-
-### 📌 Cart Page
-![Screenshot 4](frontend/src/Components/Assets/Screenshot4.png)
-
-### 📌 Login Page
 ![Screenshot 5](frontend/src/Components/Assets/Screenshot5.png)
 
-### 📌 Signup Page
-![Screenshot 6](frontend/src/Components/Assets/Screenshot6.png)
+### 📌 New Collections 
+![Screenshot 4](frontend/src/Components/Assets/Screenshot4.png)
 
-### 📌 Admin Dashboard
-![Screenshot 7](frontend/src/Components/Assets/Screenshot7.png)
+### 📌 Product Details Page
+![Screenshot 11](frontend/src/Components/Assets/Screenshot11.png)
 
-### 📌 Add Product Page (Admin)
+### 📌 Cart Page
 ![Screenshot 8](frontend/src/Components/Assets/Screenshot8.png)
 
-### 📌 Product List (Admin)
+### 📌 Login Page
+![Screenshot 10](frontend/src/Components/Assets/Screenshot10.png)
+
+### 📌 Signup Page
 ![Screenshot 9](frontend/src/Components/Assets/Screenshot9.png)
 
+### 📌 Admin Dashboard (Add Product Page)
+![Screenshot 2](frontend/src/Components/Assets/Screenshot2.png)
+
+### 📌 Product List (Admin)
+![Screenshot 3](frontend/src/Components/Assets/Screenshot3.png)
+
 ### 📌 Mobile View
-![Screenshot 10](frontend/src/Components/Assets/Screenshot10.png)
 
 
 🙌 Contributing
