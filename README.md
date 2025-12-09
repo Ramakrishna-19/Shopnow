@@ -4,172 +4,178 @@ ShopNow is a full-stack E-Commerce application built using React, Node.js, Expre
 Users can browse products, view product details, manage their cart, and securely checkout.
 Admins can add/remove products through a dedicated dashboard.
 
-🚀 Features
-⭐ User Frontend
+🚀 FEATURES
 
-🛍 Browse products
+⭐ **User Frontend**
 
-🔎 View product details (images, description, price, category)
+- Browse products
+- View product details (images, description, price, category)
+- Add to cart / remove from cart
+- Products categories (Men, Women, Kids)
+- New Collections section
+- Popular in Women section
+- Login / Signup with JWT
+- Cart items persist after login
+- Fully responsive UI
 
-🛒 Add to cart / remove from cart
+⭐ **Admin Dashboard**
 
-❤️ Products categories (Men, Women, Kids)
+- Add products (name, price, image, category)
+- Remove products
+- View product list
+- Upload product images using Multer
 
-🔥 New Collections section
+⭐ **Backend API**
 
-🌟 Popular in Women section
-
-🔐 Login / Signup with JWT
-
-🔁 Cart items persist after login
-
-📱 Fully responsive UI
-
-⭐ Admin Dashboard
-
-➕ Add products (name, price, image, category)
-
-🗑 Remove products
-
-📦 View product list
-
-📤 Upload product images using Multer
-
-⭐ Backend API
-
-Secure JWT authentication
-
-MongoDB product management
-
-User cart management
-
-Token-protected routes
-
-Persistent cart stored in MongoDB
+- Secure JWT authentication
+- MongoDB product management
+- User cart management
+- Token-protected routes
+- Persistent cart stored in MongoDB
 
 🧰 Tech Stack
-Frontend (User)
 
-React.js
+ * Frontend (User)
 
-React Router
+        React.js
+        React Router
+        Context API (Global state management)
+        CSS
 
-Context API (Global state management)
+ * Admin Panel
 
-CSS
+        React + Vite
+        Multer (Image uploads)
+        
+ * Backend
 
-Admin Panel
+        Node.js
+        Express.js
+        MongoDB + Mongoose
+        JWT Authentication
+        Multer (image uploads)
+        CORS enabled
 
-React + Vite
+📁 **Folder Structure**
 
-Multer (Image uploads)
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB + Mongoose
-
-JWT Authentication
-
-Multer (image uploads)
-
-CORS enabled
-
-📁 Folder Structure
+```
 ShopNow/
-│── backend/
-│   ├── index.js          # Main server file
-│   ├── routes/           # API routes
-│   ├── models/           # MongoDB models
-│   ├── upload/images/    # Uploaded product images
 │
-│── frontend/
+├── backend/
+│   ├── index.js            # Main server file
+│   ├── routes/             # API routes
+│   ├── models/             # MongoDB models
+│   ├── upload/
+│   │   └── images/         # Uploaded product images
+│
+├── frontend/
 │   ├── src/
 │   ├── public/
-│   ├── package.json
+│   └── package.json
 │
-│── admin/
+├── admin/
 │   ├── src/
 │   ├── public/
-│   ├── package.json
+│   └── package.json
 │
 └── README.md
+```
 
-⚙️ Environment Setup
-🖥 Backend
-cd backend
-npm install
-node index.js
+⚙️ **Environment Setup**
+
+* **Backend**
+  
+        cd backend
+        npm install
+        node index.js
+
+    Server starts at:  http://localhost:4000
+
+* **Frontend**
+
+        cd frontend
+        npm install
+        npm start
+
+    Runs at:  http://localhost:3000
+
+* **Admin Panel**
+  
+        cd admin
+        npm install
+        npm run dev
+
+    Runs at:  http://localhost:5173
 
 
-Server starts at:
+🔑 **Authentication**
 
-http://localhost:4000
-
-🎨 Frontend
-cd frontend
-npm install
-npm start
-
-
-Runs at:
-
-http://localhost:3000
-
-🛠 Admin Panel
-cd admin
-npm install
-npm run dev
-
-
-Runs at:
-
-http://localhost:5173
-
-🔑 Authentication
-
-Your app uses JWT tokens:
-
-Token created on signup/login
-
-Sent in header as auth-token
-
-Used to validate protected routes:
-
-/addtocart
-
-/removefromcart
-
-/getcart
+* Your app uses JWT tokens:
+    - Token created on signup/login  
+    - Sent in header as `auth-token`  
+    - Used to validate protected routes:
+        • `/addtocart`  
+        • `/removefromcart`  
+        • `/getcart`
 
 📡 API Endpoints
-Product APIs
-Method	Endpoint	Description
-GET	/allproducts	Get all products
-GET	/newcollections	Get last 8 products
-GET	/popularinwomen	Get 4 women category products
-POST	/addproduct	Add product (Admin)
-POST	/removeproduct	Delete product (Admin)
-User Auth APIs
-Method	Endpoint	Description
-POST	/signup	Register a new user
-POST	/login	Login user and return JWT
-Cart APIs
-Method	Endpoint	Protected	Description
-POST	/addtocart	Yes	Add item to cart
-POST	/removefromcart	Yes	Remove item from cart
-POST	/getcart	Yes	Load cart from DB
-🧪 Screenshots
 
-(Add images for homepage, product page, cart, admin panel)
+* Product APIs
+    | Method | Endpoint          | Description                     |
+    |--------|-------------------|---------------------------------|
+    | GET    | /allproducts      | Get all products                |
+    | GET    | /newcollections   | Get last 8 products             |
+    | GET    | /popularinwomen   | Get 4 women category products   |
+    | POST   | /addproduct       | Add product (Admin)             |
+    | POST   | /removeproduct    | Delete product (Admin)          |
 
-![Home Page](./screenshots/home.png)
-![Product Display](./screenshots/product.png)
-![Cart](./screenshots/cart.png)
-![Admin Panel](./screenshots/admin.png)
+* User Auth APIs
+    | Method | Endpoint | Description               |
+    |--------|----------|---------------------------|
+    | POST   | /signup  | Register a new user       |
+    | POST   | /login   | Login user and return JWT |
+
+* Cart APIs
+    | Method | Endpoint        | Protected | Description          |
+    |--------|-----------------|-----------|----------------------|
+    | POST   | /addtocart      | Yes       | Add item to cart     |
+    | POST   | /removefromcart | Yes       | Remove item from cart|
+    | POST   | /getcart        | Yes       | Load cart from DB    |
+
+## 🖼 Screenshots
+
+### 📌 Home Page
+![Screenshot 1](frontend/src/Components/Assets/Screenshot1.png)
+
+### 📌 Admin Panel
+![Screenshot 2](frontend/src/Components/Assets/Screenshot2.png)
+
+### 📌 Product Listing Page
+
+### 📌 Product Details Page
+![Screenshot 3](frontend/src/Components/Assets/Screenshot3.png)
+
+### 📌 Cart Page
+![Screenshot 4](frontend/src/Components/Assets/Screenshot4.png)
+
+### 📌 Login Page
+![Screenshot 5](frontend/src/Components/Assets/Screenshot5.png)
+
+### 📌 Signup Page
+![Screenshot 6](frontend/src/Components/Assets/Screenshot6.png)
+
+### 📌 Admin Dashboard
+![Screenshot 7](frontend/src/Components/Assets/Screenshot7.png)
+
+### 📌 Add Product Page (Admin)
+![Screenshot 8](frontend/src/Components/Assets/Screenshot8.png)
+
+### 📌 Product List (Admin)
+![Screenshot 9](frontend/src/Components/Assets/Screenshot9.png)
+
+### 📌 Mobile View
+![Screenshot 10](frontend/src/Components/Assets/Screenshot10.png)
+
 
 🙌 Contributing
 
