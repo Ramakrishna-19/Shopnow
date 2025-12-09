@@ -11,6 +11,16 @@ const { log } = require("console");
 app.use(express.json());
 app.use(cors());
 
+require("dotenv").config();
+
+const cloudinary = require("cloudinary").v2;
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
+
 mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
@@ -30,12 +40,26 @@ const upload = multer({storage: storage})
 
 app.use('/images', express.static('upload/images'))
 
-app.post("/upload", upload.single('product'), (req, res)=>{
-    res.json({
-        success: 1,
-        image_url:`http://localhost:${port}/images/${req.file.filename}`
-    })
-})
+app.post("/upload", upload.single("product"), async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ success: 0, error: "No file uploaded" });
+    }
+
+    const result = await cloudinary.uploader.upload(req.file.path, {
+      folder: "shopnow_products",
+    });
+
+    return res.json({
+      success: 1,
+      image_url: result.secure_url,
+    });
+  } catch (error) {
+    console.error("Cloudinary upload error:", error);
+    return res.status(500).json({ success: 0, error: "Image upload failed" });
+  }
+});
+
 
 const Product = mongoose.model("Product", {
     id:{
