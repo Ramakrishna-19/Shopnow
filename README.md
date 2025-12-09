@@ -172,7 +172,7 @@ ShopNow/
 ![Screenshot 3](frontend/src/Components/Assets/Screenshot3.png)
 
 ### 📌 Mobile and Tab (different sizes) View
-![Screenshot 12](frontend/src/Components/Assets/Screenshot12.png)![Screenshot 13](frontend/src/Components/Assets/Screenshot13.png)
+ ![Screenshot 12](frontend/src/Components/Assets/Screenshot12.png)    ![Screenshot 13](frontend/src/Components/Assets/Screenshot13.png)
 
 🙌 **Contributing**
 
