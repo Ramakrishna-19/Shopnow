@@ -21,16 +21,39 @@ const Footer = () => {
         <li>Contact</li>
       </ul>
       <div className="footer-social-icon">
+
         <div className="footer-icons-container">
-            <img src={instagram_icon} alt="" />
+          <a 
+            href="https://www.instagram.com/probably_krishna/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <img src={instagram_icon} alt="Instagram" />
+          </a>
         </div>
+
         <div className="footer-icons-container">
-            <img src={pintester_icon} alt="" />
+          <a 
+            href="https://in.pinterest.com/ramakrishnadyavari1920/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <img src={pintester_icon} alt="Pinterest" />
+          </a>
         </div>
+
         <div className="footer-icons-container">
-            <img src={whatsapp_icon} alt="" />
+          <a 
+            href="https://wa.me/916305773050" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <img src={whatsapp_icon} alt="WhatsApp" />
+          </a>
         </div>
+
       </div>
+
       <div className="footer-copyright">
         <hr />
         <p>Copyright @ 2025 - All Right Reserved.</p>
