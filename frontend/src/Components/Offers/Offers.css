@@ -102,6 +102,7 @@
 @media(max-width: 800px){
     .Offers{
         margin-bottom: 60px;
+        height: auto;
     }
     .offers-left h1{
         font-size: 22px;
