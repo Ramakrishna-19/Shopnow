@@ -37,16 +37,21 @@ const upload = multer({ storage: multer.memoryStorage() });
 app.post("/upload", upload.single("product"), async (req, res) => {
   try {
     if (!req.file) {
+      console.log("❌ No file received from client");
       return res.status(400).json({ success: 0, error: "No file uploaded" });
     }
+
+    console.log("📦 File received, uploading to Cloudinary...");
 
     const uploadStream = cloudinary.uploader.upload_stream(
       { folder: "shopnow_products" },
       (error, result) => {
         if (error) {
-          console.error("Cloudinary Upload Error:", error);
-          return res.status(500).json({ success: 0, error: "Upload failed" });
+          console.error("🔥 CLOUDINARY ERROR:", error);
+          return res.status(500).json({ success: 0, error: error.message });
         }
+
+        console.log("✅ Upload SUCCESS → URL:", result.secure_url);
 
         return res.json({
           success: 1,
@@ -57,10 +62,11 @@ app.post("/upload", upload.single("product"), async (req, res) => {
 
     uploadStream.end(req.file.buffer);
   } catch (error) {
-    console.error("Upload Failed:", error);
-    res.status(500).json({ success: 0, error: "Server error" });
+    console.error("🔥 SERVER ERROR:", error);
+    res.status(500).json({ success: 0, error: error.message });
   }
 });
+
 
 // PRODUCT MODEL
 const Product = mongoose.model("Product", {
